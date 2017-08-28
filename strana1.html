@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- <link rel="stylesheet" type="text/css" href="mavastil.css"> -->
+  <style>
+    #semafor {
+  width: 60px;
+  height: 200px;
+  border: 1px solid silver;
+  border-radius: 20px;
+  margin-left: 150px;
+}
+
+.boje {
+  width: 50px;                      /* widows: 50px; */
+  height: 50px;
+  border: 1px solid silver;
+  border-radius: 50px;
+  margin: 4px;
+}
+  </style>
+</head>
+<body>
+
+  <div id="semafor">
+    <div class="boje"></div>  
+    <div class="boje"></div>
+    <div class="boje"></div>
+  </div>
+    <br />
+  <!-- <div id="semafor2">
+    <div class="boje2"></div>  
+    <div class="boje2"></div>
+    <div class="boje2"></div>
+  </div> -->
+
+<script>
+function oba() {
+    function semafor() {
+    
+    var boje = document.getElementsByClassName('boje');
+    boje[0].style.background = "red";
+    boje[1].style.background = "grey";
+    boje[2].style.background = "grey";
+
+        // function pzu() {
+            function toYellow() {
+                boje[1].style.background = "yellow";
+            }// toYellow
+
+            function toGreen() {
+                boje[0].style.background = "grey";                
+                boje[1].style.background = "grey";
+                boje[2].style.background = "green";                
+            }// toGreen
+        // }// pzu
+
+// var palizuto = setTimeout(pzu, 3000);
+var zu = setTimeout(toYellow, 3000);
+var ze = setTimeout(toGreen, 4000);
+
+var ponovo = setInterval(semafor(), 7000); // ?? DA LI MOZE SEMAFOR OVAKO DA SE POZOVE, UNUTAR SEBE ??
+
+    }// semafor
+    //semafor();
+    }// oba
+    oba();
+</script>
+</body>
+</html>
